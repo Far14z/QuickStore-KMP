@@ -29,6 +29,7 @@ object FavTab : Tab {
                 TabOptions(
                     index = 0u,
                     title = "Favorite",
+                    icon = icon
                 )
             }
         }

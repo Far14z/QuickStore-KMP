@@ -28,6 +28,7 @@ object HomeTab : Tab {
                 TabOptions(
                     index = 0u,
                     title = "Home",
+                    icon = icon
                 )
             }
         }
