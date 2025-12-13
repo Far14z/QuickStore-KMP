@@ -18,6 +18,14 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 
+class BottomBarScreen : Screen {
+    @Composable
+    override fun Content() {
+        TODO("Not yet implemented")
+    }
+
+}
+
 class MainScreen: Screen {
     @Composable
     override fun Content() {
@@ -32,6 +40,14 @@ class MainScreen: Screen {
                 }
             ) {
                 Text("Navigation to Second Screen")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(
+                onClick = {
+                    navigator.push(BottomBarScreen())
+                }
+            ) {
+                Text("Bottom Bar")
             }
         }
     }
@@ -56,5 +72,4 @@ class SecondScreen: Screen {
             }
         }
     }
-
 }

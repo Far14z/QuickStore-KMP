@@ -15,7 +15,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosArm64(),
         iosSimulatorArm64()
@@ -25,9 +25,9 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     jvm()
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
@@ -35,11 +35,17 @@ kotlin {
         }
         commonMain.dependencies {
 
-            // Voyager Navigation Library
+            // Voyager Navigation
             implementation(libs.voyager.navigator)
 
-            // Voyager library transitions effect
+            // Voyager transitions effect
             implementation(libs.voyager.transitions)
+
+            // Voyager Navigation Bar library
+            implementation(libs.voyager.tabNavigator)
+
+            // Material Icons Extended
+            implementation(libs.material.icons.extended)
 
             implementation(compose.runtime)
             implementation(compose.foundation)

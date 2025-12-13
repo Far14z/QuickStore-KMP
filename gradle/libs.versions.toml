@@ -16,7 +16,10 @@ kotlin = "2.2.21"
 kotlinx-coroutines = "1.10.2"
 
 # Voyager Navigation Library
-voyager = "1.1.0-beta02"
+voyager = "1.0.0-rc10"
+
+# Material Icons Extended
+materialIconsExtended = "1.7.3"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -32,10 +35,16 @@ androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle
 kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 
 # Voyager Navigatior
+material-icons-extended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
 
 # Voyager Transitions
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+
+# Voyager Navigation Bar
+voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+
+#
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
