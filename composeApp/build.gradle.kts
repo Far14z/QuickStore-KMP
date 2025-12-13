@@ -47,6 +47,9 @@ kotlin {
             // Material Icons Extended
             implementation(libs.material.icons.extended)
 
+            // Multiplatform Preferences
+            implementation(libs.multiplatform.settings)
+
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)

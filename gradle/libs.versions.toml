@@ -15,11 +15,14 @@ junit = "4.13.2"
 kotlin = "2.2.21"
 kotlinx-coroutines = "1.10.2"
 
-# Voyager Navigation Library
+# Voyager Navigation
 voyager = "1.0.0-rc10"
 
 # Material Icons Extended
 materialIconsExtended = "1.7.3"
+
+# Multiplatform Settings
+multiplatform-settings = "1.3.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -44,7 +47,8 @@ voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", vers
 # Voyager Navigation Bar
 voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
 
-#
+# Multiplatform settings
+multiplatform-settings = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "multiplatform-settings" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
