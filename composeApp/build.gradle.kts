@@ -7,6 +7,12 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+
+    // Kotlin Serialization
+    alias(libs.plugins.kotlinSerialization)
+
+    // Google Services for Firebase
+    alias(libs.plugins.google.services)
 }
 
 kotlin {
@@ -32,6 +38,18 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            // ktor for networking - OkHttp client
+            implementation(libs.ktor.client.okhttp)
+
+            // Koin - Dependency Injection
+            implementation(libs.koin.android)
+
+            // Firebase BOM
+            implementation(project.dependencies.platform(libs.firebase.bom))
+
+            // Firebase Auth
+            implementation(libs.firebase.auth)
         }
         commonMain.dependencies {
 
@@ -47,8 +65,21 @@ kotlin {
             // Material Icons Extended
             implementation(libs.material.icons.extended)
 
+            // Koin - Dependency Injection
+            implementation(libs.koin.compose)
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose.viewmodel)
+            implementation(libs.koin.compose.viewmodel.navigation)
+
             // Multiplatform Preferences
             implementation(libs.multiplatform.settings)
+
+            // Ktor for networking - Common
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.negotiation)
+
+            // Ktor serialization - JSON
+            implementation(libs.ktor.serialization.kotlinx.json)
 
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -65,6 +96,10 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+        }
+        iosMain.dependencies {
+            // ktor for networking - Darwin client
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
